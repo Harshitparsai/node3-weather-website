@@ -6,6 +6,8 @@ const geocode = require('./utils/geocode')
 
 const viewsPath = path.join(__dirname,'../templates/views')
 const app = express()
+const port = process.env.PORT || 3000
+
 const  partialsPath = path.join(__dirname,'../templates/partials')
 
 
@@ -74,6 +76,6 @@ app.get('*',(req,res)=>{
 //app.com/about
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("server is up on port 3000")
 })
