@@ -55,9 +55,10 @@ app.get("/weather",(req,res)=>{
                 {
                     return res.send(error)
                 }
+                console.log(forcastdata)
                 const resdata = {
                     address: req.query.address,
-                    forecast: forcastdata.weather[0].description
+                    forecast: forcastdata.weather[0].description + " temperature  is : " + forcastdata.main.temp 
                 }
                 res.send(resdata)
             })
